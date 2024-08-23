@@ -1,0 +1,206 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* .earth img{
+  position: absolute;
+  top: 100px;
+  left: 93px;
+} */
+.main{
+  /* border: 2px solid red; */
+ /* background: linear-gradient(rgba(1, 1, 1, 0.9),rgba(0, 0, 0, 0.1));*/
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+
+  /* z-index: +5; */
+}
+.main::before{
+  background-image: url(../images/sug_banner_20220909.jpg);
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  
+  content: "";
+  background-size: cover;
+  z-index: -1;
+}
+.navbar{
+  color: white;
+  /*border: 2px solid rgb(0, 0, 0);*/
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(8 76 54);
+  height: 105px;
+}
+.navbar #logout{
+  font-size: 20px;
+}
+.navbar #logout:hover{
+  background: rgb(255, 255, 255);
+  color: black;
+  cursor: pointer;
+}
+
+.navbar #losteditems,#findeditems{
+  height: 60px;
+  width: 150px;
+  font-size: 20px;
+  font-weight: bolder;
+}
+.navbar #losteditems:hover{
+  background-color: rgb(255, 255, 255);
+  height: 105px;
+  color: black;
+  cursor: pointer;
+  
+}
+.navbar #findeditems:hover{
+  background-color: rgb(255, 255, 255);
+  height: 105px;
+  color: black;
+  cursor: pointer;
+}
+
+.navbar img{
+  width: 105px;
+}
+.navbar h1{
+  margin-right: 5%;
+  
+}
+.navbar button{
+  color: yellow;
+  margin-right: 5%;
+  padding: 10px;
+ /* border: 2px solid rgb(0, 0, 0);
+  /*border-radius: 5px;*/
+  height: 105px;
+  width: 100px;
+  background: none;
+  border: none;
+}
+.welcome{
+  margin: 20px 30px;
+  /* border: 2px solid red; */
+  display: flex;
+  /* height: 70px; */
+}
+.welcome h1{
+  margin: 0px 10px;
+  color: white;
+}
+
+.listButton{
+  /* border: 2px solid red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0px;
+  width: 400px;
+}
+.listButton button{
+  padding: 20px;
+  font-size: 20px;
+  font-weight: bolder;
+  border: 2px solid black;
+  width: 170px;
+  
+}
+
+
+.listButton button:hover{   
+  color:rgb(206, 255, 81);
+  border: 2px solid rgb(255, 255, 255);
+}
+#submit:hover{
+border: 2px solid rgb(255, 255, 69);
+scale: 1.09;
+}
+.lostform{
+  
+  color: white;
+  /* border: 2px solid red; */
+  border-radius: 20px;
+  height: 670px;
+  width: 400px;
+  position: absolute;
+  right: 40px;
+  top: 120px;
+  padding: 20px;
+  background-color: rgba(8, 76, 54, 0.967);
+}
+
+.lostform input{
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  display: block;
+  width: 355px;
+  height: 40px;
+  margin: 10px 0px;
+  border: 2px solid rgb(255, 255, 255);
+  padding: 0px 10px;
+  border-radius: 5px;
+  background: none;
+}
+
+.lostform label{
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.lostform button{
+  color: white;
+  background: none;
+  border: 2px solid rgb(255, 255, 255);
+  width: 110px;
+  height: 50px;
+  border-radius: 5px;
+  margin: 10px 115px;
+  font-size: 20px;
+}
+#description{
+  font-size: larger;
+  text-align: justify;
+  margin-top: 50px;
+  font-size: 30px;
+  color: white;
+  font-family: 'Times New Roman', Times, serif;
+  margin-left: 30px;
+  max-width: 400px;
+  background-color: rgb(8 76 54 / 50%);
+  border-radius: 20px;
+  padding: 10px;
+
+}
+.navbar #LostedItems,#foundeditems,#logoutbutton{
+  height: 60px;
+  width: 150px;
+  font-size: 20px;
+  font-weight: bolder;
+  color: white;
+}
+.navbar #LostedItems:hover{
+  background-color: rgb(255, 255, 255);
+  height: 75px;
+  color: black;
+  cursor: pointer;
+  
+}
+.navbar #foundeditems:hover{
+  background-color: rgb(255, 255, 255);
+  height: 75px;
+  color: black;
+  cursor: pointer;
+}
+.navbar #logoutbutton:hover{
+  background-color: rgb(255, 255, 255);
+  height: 75px;
+  color: black;
+  cursor: pointer;
+}
