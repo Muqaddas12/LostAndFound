@@ -4,7 +4,7 @@ const multer = require('multer');
 const path = require('path');
 const fs = require('fs');
 var bodyParser = require('body-parser');
-var database = require('../database');
+var database = require('../database.js');
 const session = require('express-session');
 
 
@@ -31,9 +31,8 @@ app.use('/static', express.static(path.join(__dirname, 'public')));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended : true}));
-
 // routes
-router.get('/', function(req, res, next) {
+router.get('/', function(req, res) {
  res.render('index', { title: 'Express', session : req.session });
 });
 router.get('/FoundedItems',FoundedItems);

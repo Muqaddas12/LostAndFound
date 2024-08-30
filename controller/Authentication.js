@@ -22,7 +22,7 @@ const LoginAuthentication=(req, res, next)=> {
                 for (var count = 0; count < data.length; count++) {
                     if (data[count].Password == user_password) {
                         req.session.user_id = data[count].id;
-                        if(RedirectLabel==='Homepage')
+                        if(RedirectLabel==='index')
                         {
                             res.redirect("/");
                         }
@@ -37,12 +37,14 @@ const LoginAuthentication=(req, res, next)=> {
                         
                     }
                     else {
-                        res.send('Incorrect Password');
+                      res.redirect('/Login',{msg:"please enter correct details",Redirect:"Redirect"})
                     }
                 }
             }
             else {
-                res.send('Incorrect Email Address');
+                res.render('Login', { msg: 'Please Enter the correct details', flag: '1',Redirect: 'Redirect'
+ })
+
             }
             res.end();
         });
@@ -57,9 +59,9 @@ const LoginAuthentication=(req, res, next)=> {
 
 const LoginRedirect= (req, res)=>{
     const Redirect =req.query.ForRedirect;
-    if(Redirect==='FirstLogin')
+    if(Redirect==='Login')
     {
-        res.render('Login',{Redirect:"Homepage"}) 
+        res.render('Login',{Redirect:"index"}) 
     }
     else if(Redirect==='LostedItems')
     {

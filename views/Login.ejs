@@ -27,7 +27,9 @@
                                 <label>Password</label>
                                 <input type="password" name="user_password" class="form-control" required />
                                <input type="hidden" name="RedirectLabel" value='<%=Redirect%>'>
-                                
+            <%if(Redirect=='Redirect'){%>
+<label><%=msg%></label>
+            <%}%>
                                 
                             </div>
                             <div class="mb-3">

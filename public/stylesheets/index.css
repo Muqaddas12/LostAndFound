@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+::placeholder{
+  padding-left: 1vw;
+}
+body{
+  background-image: url('../images/bg.jpg');
+  background-repeat: no-repeat;
+}
+.navbar {
+  display: flex;
+  background-color: rgb(8, 76, 54);
+  height: 14vh;
+  width: 100%;
+}
+#logo {
+  width: 7vw;
+  height: 14vh;
+}
+#title {
+  font-size: 6vh;
+  width: 80vw;
+  height: 10vh;
+  margin-left: 1vw;
+  font-weight: 600;
+}
+.nav-btn {
+  margin-left: 5vw;
+  margin-top: 7vh;
+  width: 50vw;
+  display: flex;
+  flex-direction: row;
+
+}
+
+.item-btn {
+  padding: 1vw;
+  cursor: pointer;
+  border: none;
+  background: none;
+  height: 7vh;
+  font-size: 4vh;
+}
+#login{
+  margin-left: 30vw;
+}
+.item-btn:hover {
+  background-color: white;
+  color: rgb(8, 76, 54);
+}
+#side-btn{
+  display: flex;
+  margin-top: 10vh;
+  margin-left: 10vw;
+  width: 30vw;
+  height: 10vh;
+}
+.main-btn{
+  width: 10vw;
+  background-color: rgb(8, 76, 54);
+  font-size: larger;
+  cursor: pointer;
+  
+}
+#fbtn{
+  border-top-left-radius: 5vw;
+  border-bottom-left-radius: 5vw;
+}
+#lbtn{
+  border-top-right-radius: 5vw;
+  border-bottom-right-radius: 5vw;
+}
+#side-content{
+   background-color: rgb(8, 76, 54);
+  width: 25vw;
+  height: 25vh;
+  margin-left: 8vw;
+  margin-top: 5vh;
+border-radius: 5vw;
+}
+#main-content{
+  width: 40%;
+}
+#detail{
+  padding: 4vh;
+ display: flex;
+ text-align: center;
+ 
+}
+#right-content{
+
+  margin-top: -45vh;
+  margin-left: 70vw;
+width: 100%;
+ 
+ 
+}
+#fl-content{
+  
+  background-color: rgb(8, 76, 54);
+  height: 75vh;
+  width: 25vw;
+  border-radius: 2vw;
+  
+}
+#form-title{
+  margin-left: 25%;
+  font-size: x-large;
+}
+
+.data-get{
+  border-radius: 2vw;
+  height: 5vh;
+  width: 20vw;
+
+  margin-bottom: 2vh;
+  margin-left: 1vw;
+
+}
+.form-label{
+ margin-left: 1.5vw;
+
+}
+#response{
+  margin-left: 17%;
+  width: 15vw;
+  height: 5vh;
+  color: black;
+  background-color: white;
+  border-radius: 3vw;
+}

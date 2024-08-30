@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+       
+        <link rel="stylesheet" href="./test.css">
+
+        <title>Found and lost</title>
+    </head>
+    <body>
+                     
+    <div class="main">
+        <div class="navbar">
+          <a href="/">
+            <img src="./public/images/suglogo.png" alt="logo" />
+          </a>
+         
+          <h1>Lost And Found System</h1>
+  
+          
+          <!-- <%if(session.user_id) { %> -->
+          <form action="/FoundedItems" method="get">
+              <button id="foundeditems" value="FoundedItems" href="/FoundedItems">FoundedItems</button>
+          </form>
+          <!-- <%}else {%> -->
+            <form action="/Login" method="get">
+              <button id="foundeditems" name="ForRedirect" value="FoundedItems" type="submit">LostedItems</button>
+          </form>
+            <!-- <%}%> -->
+  
+          <!-- <%if(session.user_id) { %> -->
+          <form action="/LostedItems" method="get">
+            <button id="LostedItems" value="FoundedItems" href="/LostedItems">LostedItems</button>
+        </form>
+        <!-- <%}else {%> -->
+
+          <form action="/Login" method="get">
+            <button id="LostedItems" name="ForRedirect" value="LostedItems" type="submit">LostedItems</button>
+        </form>
+        
+          <!-- <%}%> -->
+  
+        <!-- <% if(session.user_id) { %> -->
+          <form action="/Logout" method="post">
+              <button id="logoutbutton" value="Logout" href="/Logout">Log Out</button>
+          </form>
+          <!-- <% } else {%> -->
+            <form action="/Login" method="get">
+              <button id="LostedItems" name="ForRedirect" value="FirstLogin" href="/Login">Log In</button>
+          </form
+        >
+  
+        </div>
+        <div class="listButton">
+          <button
+          
+            onclick="LostForm()"
+            class="lostbutton"
+            style="background-color: #2c5f2d; border-radius: 100px 0px 0px 100px"
+          >
+            Losted Items Report
+          </button>
+          <button onclick="FoundForm()"
+            id="findbutton"
+            style="
+              background-color: #97bc62;
+              border-radius: 0px 100px 100px 0px;
+              margin-left: -2px;
+            "
+          >
+            Founded Items Report
+          </button>
+        </div>
+  
+        
+        <div id="description">
+          Lost and Found Software is designed to reduce the administrative
+          workload, while improving service and increasing the return rate and
+          customer satisfaction.
+        </div>
+  
+  
+  
+  
+
+        <form action="/" method="post"  enctype="multipart/form-data">
+        <div id="dlostform" class="lostform">
+          <h2 style="margin: 0px 100px;">Losted Item Report Form</h2>
+          <label>ItemName</label>
+          <input name="Name" type="text" placeholder="Type Here" required>
+          <label>YourName</label>
+          <input name="Pname" type="text" placeholder="Enter your name" required>
+          <label>Description</label>
+          <input name="Description" type="text" width="400px"height="400px" required>
+          <label>Place</label>
+          <input name="Place1" type="text" placeholder="Any Idea Where you Lost?" required>
+          <label>Mobile Number</label>
+          <input name="mno" type="text" placeholder="Enter Mobile Number" required>
+          <label for="">Add Image</label>
+          <input name="img" type="file" accept="image/*" required>
+            <button name="lost" id="submit" onclick="smsg()" >Submit</button>
+          <label id="msg"></label>
+      </div>
+  </form>
+
+
+               
+                </div>
+            </div>
+        </div>
+        <script src="../javascripts/Homepage.js">
+        </script>
+    </body>
+</html>
