@@ -4,17 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../stylesheets/index.css" />
-    <title>Homepage</title>
+    <title><%= locals.title %></title>
   </head>
   <body>
     <div class="navbar">
       <img id="logo" src="/images/suglogo.png" alt="No image found" />
       <span id="title">Lost And Found</span>
       <div class="nav-btn">
-        <form action="/Foundeditems" method="get">
+
+        <form action=<%-locals.status==='LoggedOut'?'/Login':"/Foundeditems"%> method="get">
           <input class="item-btn" type="submit" value="Foundeditems" />
         </form>
-        <form action="/LostedItems" method="get">
+
+        <form action=<%-locals.status==='LoggedOut'?'/Login':"/LostedItems"%> method="get">
           <input class="item-btn" type="submit" value="Losteditems" />
         </form>
         <form method="get" action="ContactUs">
@@ -22,15 +24,15 @@
         </form>
       </div>
       <div id="login" class="nav-btn">
-        <%if(!session.user){%>
-        <form action="Login" method="get">
-          <input type="submit" name="ForRedirect" value="Login" class="item-btn" />
+        <% if(locals.status==='LoggedOut'){ %>
+        <form action="/Login" method="get">
+          <input type="submit" value="Login" class="item-btn" />
         </form>
-        <%}else{%>
-<form action="Logout" method="get">
-          <input type="submit" name="ForRedirect" value="Logout" class="item-btn" />
+       <% }else{ %>
+<form action="/Logout" method="get">
+          <input type="submit" value="Logout" class="item-btn" />
         </form>
-        <%}%>
+      <% } %>
       </div>
     </div>
     <div id="main-content">
@@ -72,86 +74,6 @@
         </form>
       </div>
     </div>
-    <script>
-      document.querySelectorAll(".main-btn").forEach((button) => {
-        button.addEventListener("click", () => {
-          if (button.value == "FoundItem") {
-            document.getElementById(
-              "right-content"
-            ).innerHTML = `     <form id="fl-content" action="su" method="post">
-                    <label id="form-title" for="title">
-                        Founded item
-                    </label>
-                   <br>
-            <label class="form-label" for="name">YourName*</label><br>
-            <input class="data-get" type="text" name="name" id="name" placeholder="Enter Your Name" required><br>
-            <label class="form-label" for="item-name">item name*</label><br>
-            <input class="data-get" type="text" name="itemname" placeholder="Enter the item name" required><br>
-            <label class="form-label" for="address">Discription</label><br>
-            <input class="data-get" type="text" name="adress" placeholder="Discription"><br>
-            <label class="form-label" for="mobile">
-                Mobile Number*
-            </label><br>
-            
-            <input class="data-get" type="tel" placeholder="Enter your mobile number" required><br>
-            <label for="place" class="form-label">Place</label><br>
-            <input type="text" name="place" class="data-get" placeholder="Enter where you find the item"><br>
-            <label class="form-label" for="image">Item Image*</label><br>
-            <input type="file" name="file" class="data-get" accept="image/*" required><br>
-            
-            <input type="submit" id="response">
-
-        </form>`;
-          } else if (button.value == "LostItem") {
-           document.getElementById('right-content').innerHTML=` <form id="fl-content" action="su" method="post">
-          <label id="form-title" for="title">LostedItems </label>
-          <br />
-          
-          <label class="form-label" for="item-name">item name*</label><br />
-          <input
-            class="data-get"
-            type="text"
-            name="itemname"
-            placeholder="Enter the item name"
-            required
-          /><br />
-          <label class="form-label" for="address">Item details*</label><br />
-          <input
-            class="data-get"
-            type="text"
-            name="adress"
-            placeholder="Enter the item details"
-            required
-          /><br />
-          <label class="form-label" for="mobile"> Mobile Number* </label><br />
-
-          <input
-            class="data-get"
-            type="tel"
-            placeholder="Enter your mobile number"
-            required
-          /><br />
-          <label for="place" class="form-label">Place</label><br />
-          <input
-            type="text"
-            name="place"
-            class="data-get"
-            placeholder="Where you lost the item?"
-          /><br />
-          <label class="form-label" for="image">Item Image*</label><br />
-          <input
-            type="file"
-            name="file"
-            class="data-get"
-            accept="image/*"
-            required
-          /><br />
-
-          <input type="submit" id="response" />
-        </form>`;
-          }
-        });
-      });
-    </script>
+    <script src="../javascripts/Homepage.js"></script>
   </body>
 </html>

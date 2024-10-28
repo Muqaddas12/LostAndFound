@@ -115,3 +115,75 @@
         </script>
     </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <%  Sampledata.forEach(function(data){ %>
+
+    
+   
+
+     
+    <div class="listbox">
+        <div class="des">
+            <h2>FoundedItems</h2>
+            <h3><%=data.date%></h3>
+        </div>
+        <div class="des">
+            <h2><%=data.Name%></h2>
+            <h3>Posted by you</h3>
+        </div>
+       
+        <div class="detail">
+            <img src="<%= data.image %>" alt="image" height="200px" width="200px">
+
+            <div style="width: 200px; ">
+                <h3>Name</h3>
+                <p><%=data.Pname%></p>
+                <h3> Contact</h3>
+                <p><%data.Name%></p>
+                <p><%=data.contact%></p>
+            </div>
+            <div style="width: 500px; ">
+                <h3>Description</h3>
+                <p><%=data.Description%></p>
+                <h3>Status</h3>
+                <p><%=data.status%></p>
+                <button onclick="buttonclicked()">Not verified by faculty</button>
+                <label id="check"></label>
+                
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <%  }) %>
