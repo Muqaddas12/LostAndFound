@@ -1,5 +1,12 @@
 # 🎒 Campus Lost & Found App
 
+[![MIT License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![Node.js](https://img.shields.io/badge/Node.js-18.x-green.svg)](https://nodejs.org/)
+[![Express](https://img.shields.io/badge/Express.js-Backend-blue.svg)](https://expressjs.com/)
+[![MongoDB](https://img.shields.io/badge/Database-MongoDB-brightgreen.svg)](https://www.mongodb.com/)
+[![Status](https://img.shields.io/badge/status-Active-brightgreen.svg)]()
+[![Made with EJS](https://img.shields.io/badge/template-EJS-yellow.svg)](https://ejs.co/)
+
 A community-focused web application designed to help college students report, find, and recover lost and found items on campus efficiently and securely.
 
 ---
